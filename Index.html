@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Constitution of India Learning Platform</title>
+    <title>E-constitution</title>
 </head>
 
 <body class="light-mode">
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="brand">E-Constitution</div>
+        <div class="brand"></div>
         <ul class="nav-menu">
             <li onclick="openBreakdown()">Breakdown</li>
             <li onclick="openQuiz()">Quiz</li>
             <li onclick="openGame()">Game</li>
             <li onclick="openLeaderboard()">Leaderboard</li>
         </ul>
-        <button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        <button class="toggle-dark-mode" onclick="toggleDarkMode()">Mode</button>
     </nav>
 
     <!-- Main Content -->
@@ -79,7 +79,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeQuiz()">&times;</span>
             <h2>Quiz: Who is known as the Father of the Indian Constitution?</h2>
-            <div>
+            <div class="q-opts">
                 <button onclick="checkAnswer('A')">A) Mahatma Gandhi</button>
                 <button onclick="checkAnswer('B')">B) Dr. B.R. Ambedkar</button>
                 <button onclick="checkAnswer('C')">C) Jawaharlal Nehru</button>
@@ -142,7 +142,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Constitution Learning. All Rights Reserved.</p>
+        <p>&copy; 2024 E-constitution. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
