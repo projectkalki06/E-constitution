@@ -1,8 +1,6 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background: url('constitution-background.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-size: contain;
     color: #333;
     transition: background-color 0.3s, color 0.3s;
     margin: 0;
@@ -16,11 +14,21 @@ body {
     padding: 15px;
     background-color: #007bff;
     color: white;
+    font-size: 1.4rem;
 }
 
 .brand {
+    height: 7vh;
+    width: 7vh;
+    position: relative;
+    left: 2vh;
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
     font-size: 24px;
     font-weight: bold;
+    
 }
 
 .nav-menu {
@@ -112,6 +120,7 @@ body {
     border: 1px solid #888;
     width: 80%;
     border-radius: 10px;
+    height: fit-content;
 }
 
 /* Close Button */
@@ -127,7 +136,20 @@ body {
 .close:focus {
     color: black;
 }
-
+.q-opts{
+  height: 5vh;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 2.3rem;
+  gap: .1rem;
+}
+.q-opts button{
+  border: none;
+  background-color: lightblue;
+  
+}
 /* Accordion Styles */
 .accordion-item {
     margin-bottom: 10px;
@@ -205,11 +227,14 @@ th {
 /* Footer Styles */
 footer {
     text-align: center;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #007bff;
     color: white;
     position: relative;
     bottom: 0;
+    height: 10vh;
     width: 100%;
 }
 
@@ -221,5 +246,8 @@ footer {
 
     .card {
         width: 100%;
+    }
+    .navbar{
+      font-size: .7rem;
     }
 }
