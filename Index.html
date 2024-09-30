@@ -1,0 +1,152 @@
+Html code:-
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Constitution of India Learning Platform</title>
+</head>
+
+<body class="light-mode">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="brand">Constitution Learning</div>
+        <ul class="nav-menu">
+            <li onclick="openBreakdown()">Breakdown</li>
+            <li onclick="openQuiz()">Quiz</li>
+            <li onclick="openGame()">Game</li>
+            <li onclick="openLeaderboard()">Leaderboard</li>
+        </ul>
+        <button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="options">
+            <h2>Explore the Constitution of India</h2>
+            <div class="option-cards">
+                <div class="card" onclick="openBreakdown()">
+                    <h3>Breakdown of the Constitution</h3>
+                    <p>Explore the articles, schedules, and amendments in a simplified way.</p>
+                </div>
+                <div class="card" onclick="openQuiz()">
+                    <h3>Gamified Learning</h3>
+                    <p>Test your knowledge with interactive quizzes.</p>
+                </div>
+                <div class="card" onclick="openGame()">
+                    <h3>Interactive Game</h3>
+                    <p>Learn by playing a simplified game on rights and duties.</p>
+                </div>
+                <div class="card" onclick="openLeaderboard()">
+                    <h3>Leaderboard</h3>
+                    <p>See where you rank among fellow learners.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breakdown Modal -->
+    <div id="breakdownModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBreakdown()">&times;</span>
+            <h2>Breakdown of the Indian Constitution</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">Preamble</button>
+                    <div class="accordion-content">
+                        <p>The Preamble is an introductory statement that declares the purpose and objectives of the Constitution.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">Fundamental Rights</button>
+                    <div class="accordion-content">
+                        <p>Fundamental Rights are basic human rights guaranteed to all citizens by the Constitution, ensuring liberty and equality.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">Directive Principles of State Policy</button>
+                    <div class="accordion-content">
+                        <p>Directive Principles are guidelines for the state to achieve social and economic justice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div id="quizModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeQuiz()">&times;</span>
+            <h2>Quiz: Who is known as the Father of the Indian Constitution?</h2>
+            <div>
+                <button onclick="checkAnswer('A')">A) Mahatma Gandhi</button>
+                <button onclick="checkAnswer('B')">B) Dr. B.R. Ambedkar</button>
+                <button onclick="checkAnswer('C')">C) Jawaharlal Nehru</button>
+                <button onclick="checkAnswer('D')">D) Sardar Patel</button>
+            </div>
+            <div id="quizResult"></div>
+        </div>
+    </div>
+
+    <!-- Game Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeGame()">&times;</span>
+            <h2>Game: Identify the Article</h2>
+            <div class="game-options">
+                <p>Which Article relates to the Right to Equality?</p>
+                <button onclick="checkGameAnswer('A')">A) Article 14</button>
+                <button onclick="checkGameAnswer('B')">B) Article 21</button>
+                <button onclick="checkGameAnswer('C')">C) Article 19</button>
+                <button onclick="checkGameAnswer('D')">D) Article 22</button>
+            </div>
+            <div id="gameResult"></div>
+        </div>
+    </div>
+
+    <!-- Leaderboard Modal -->
+    <div id="leaderboardModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLeaderboard()">&times;</span>
+            <h2>Leaderboard</h2>
+            <div id="celebrationBanner" class="celebration-banner"></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane</td>
+                        <td>120</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>You</td>
+                        <td>100</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Constitution Learning. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+  </html>
