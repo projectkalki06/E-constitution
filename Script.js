@@ -55,8 +55,10 @@ function checkAnswer(answer) {
     const result = document.getElementById("quizResult");
     if (answer === 'B') {
         result.innerText = "Correct! Dr. B.R. Ambedkar is known as the Father of the Indian Constitution.";
+        result.style.color='green';
     } else {
         result.innerText = "Incorrect. Please try again.";
+         result.style.color='red';
     }
 }
 
@@ -65,8 +67,10 @@ function checkGameAnswer(answer) {
     const result = document.getElementById("gameResult");
     if (answer === 'A') {
         result.innerText = "Correct! Article 14 relates to the Right to Equality.";
+         result.style.color='green';
     } else {
         result.innerText = "Incorrect. Please try again.";
+        result.style.color='red';
     }
 }
 
